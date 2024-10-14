@@ -49,41 +49,55 @@ dal prompt vengono dichiarati 2 ingressi:
 userKm e userAge
 
 Variabili: 
-la tariffa =  (0.21 € al km)
+la tariffa =  (0.21 € * userKm)
 prezzo scontato = 0
 sconto = 0
-prezzo totale = prezzo base - prezzo scontato
+prezzo totale = tariffa - prezzo scontato
 
-Controllo età utente tramite istruzione condizionale
+Controllo età utente e determiniamo lo sconto
+tramite istruzione condizionale
 
-Se ( userAge è < 18 anni )
+Se ( userAge è < 18 anni ) 
    allora l'utente è minorenne  // true o false
-   sconto === 20%     
+   sconto = 0.2   
        
 ALTRIMENTI SE (userAge >= 65 )
    allora l' utente è over 65  // true o false 
-   sconto === 40%
+   sconto = 0.4
 
 ALTRIMENTI                     // true o false 
     l' utente è adulto
-    sconto === 0 %
+    sconto = 0
      
 determinato lo sconto e i km scelti dall' utente 
-posso calcolare prezzo scontato e prezzo scontato del biglietto.
+posso calcolare prezzo scontato e prezzo totale del biglietto.
 
 calcolo prezzo scontato con la formula 
-prezzo scontato = tariffa * ( sconto % / 100 )  // number
+prezzo scontato = tariffa * ( percentuale sconto  / 100 )
+quindi 
+prezzo scontato = tariffa * sconto  // number
 
-calcolo prezzo totale con istruzione condizionale 
+calcolo prezzo totale tramite istruzione condizionale 
+// true o false
 
+prezzo scontato = (tariffa * sconto )
 
+se ho prezzo scontato
+    prezzo totale = (tariffa - prezzo scontato)   
 
+se non ho prezzo scontato
+    prezzo scontato = 0
+    prezzo totale = tariffa 
 
+per determinare il prezzo totale del bigletto     
+si puo quindi verificare la condizione dello sconto 
 
+SE (prezzo scontato != 0)
+    allora 
+    prezzo totale = (tariffa - prezzo scontato)
 
-
-
-
-
+ALTRIMENTI
+    prezzo scontato = 0
+    prezzo totale = tariffa 
 
 */
