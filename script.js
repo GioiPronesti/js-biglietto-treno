@@ -42,4 +42,48 @@ il prezzo base e il prezzo scontato.
 il prezzo corrispettivo sara indicato in euro 
 max 2 cifre dopo la virgola.  Es. euro 39,50  
 
+Psudo Codice
+
+Input
+dal prompt vengono dichiarati 2 ingressi:
+userKm e userAge
+
+Variabili: 
+la tariffa =  (0.21 € al km)
+prezzo scontato = 0
+sconto = 0
+prezzo totale = prezzo base - prezzo scontato
+
+Controllo età utente tramite istruzione condizionale
+
+Se ( userAge è < 18 anni )
+   allora l'utente è minorenne  // true o false
+   sconto === 20%     
+       
+ALTRIMENTI SE (userAge >= 65 )
+   allora l' utente è over 65  // true o false 
+   sconto === 40%
+
+ALTRIMENTI                     // true o false 
+    l' utente è adulto
+    sconto === 0 %
+     
+determinato lo sconto e i km scelti dall' utente 
+posso calcolare prezzo scontato e prezzo scontato del biglietto.
+
+calcolo prezzo scontato con la formula 
+prezzo scontato = tariffa * ( sconto % / 100 )  // number
+
+calcolo prezzo totale con istruzione condizionale 
+
+
+
+
+
+
+
+
+
+
+
 */
