@@ -100,4 +100,40 @@ ALTRIMENTI
     prezzo scontato = 0
     prezzo totale = tariffa 
 
+Soluzione Psudocodice     
+
+Dichiaro Variabili:
+
+userKm e userAge
+la tariffa =  (0.21 € * userKm), prezzo totale
+prezzo scontato = 0
+sconto = 0
+
+verificando lo sconto e i km scelti dall' utente 
+posso calcolare prezzo scontato e prezzo totale del biglietto.
+
+prezzo scontato = tariffa * ( percentuale sconto  / 100 )
+prezzo scontato = tariffa * sconto
+prezzo totale = (tariffa - prezzo scontato)
+
+istruzione condizionale controllo età utente // true o false
+
+Se ( userAge è < 18 anni )  
+    console.log('l'utente è minorenne')  // string
+    sconto = 0.2
+    prezzo scontato = tariffa * sconto
+    prezzo totale = (tariffa - prezzo scontato)   
+       
+ALTRIMENTI SE (userAge >= 65 )
+   console.log (allora l' utente è over 65)  // string
+   sconto = 0.4
+   prezzo scontato = tariffa * sconto
+   prezzo totale = (tariffa - prezzo scontato)
+
+ALTRIMENTI                     
+    console.log(' l' utente è adulto' )    // string
+    sconto = 0
+    prezzo scontato = 0
+    prezzo totale = tariffa
+
 */
