@@ -1,5 +1,5 @@
 
-console.log('Hello World')
+//console.log('Hello World')
 
 /* 
 Il programma dovrà chiedere all’utente il numero di chilometri che vuole percorrere e l’età del passeggero.
@@ -137,3 +137,38 @@ ALTRIMENTI
     prezzo totale = tariffa
 
 */
+
+const userAge = prompt('Inserisci la tua età ')
+const userKm = prompt('Inserisci i chilometri che vuoi percorrere')
+console.log('la tua eta:', userAge)
+console.log('i tuoi kilometri:', userKm)
+
+let startPrice =  0.21  * userKm 
+let discountPrice
+let numberDiscount = 0;
+let totalPrice 
+
+
+
+if (userAge < 18) {
+    
+    console.log("sei minorenne")  // string
+    numberDiscount = 0.2
+    discountPrice = startPrice * numberDiscount
+    totalPrice = startPrice - discountPrice
+    console.log("il prezzo finale ammonta a euro:" ,totalPrice )
+
+} else if (userAge >= 65) {
+
+    console.log("sei over 65")  // string
+    numberDiscount = 0.4
+    discountPrice = startPrice * numberDiscount
+    totalPrice = startPrice - discountPrice
+    console.log("il prezzo finale ammonta a euro:" ,totalPrice )
+} else  {
+
+    console.log("sei un adulto" )
+    totalPrice = startPrice
+    console.log("il prezzo finale ammonta a euro:" ,totalPrice )
+
+}
