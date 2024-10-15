@@ -138,8 +138,8 @@ ALTRIMENTI
 
 */
 
-const userAge = prompt('Inserisci la tua età ')
-const userKm = prompt('Inserisci i chilometri che vuoi percorrere')
+const userAge = parseFloat(prompt('Inserisci la tua età '))
+const userKm = parseInt(prompt('Inserisci i chilometri che vuoi percorrere'))
 console.log('la tua eta:', userAge)
 console.log('i tuoi kilometri:', userKm)
 
@@ -166,9 +166,12 @@ if (userAge < 18) {
     totalPrice = startPrice - discountPrice
     console.log("il prezzo finale ammonta a euro:" ,totalPrice )
 } else  {
-
+    
     console.log("sei un adulto" )
-    totalPrice = startPrice
+    numberDiscount = 0
+    discountPrice = startPrice * numberDiscount
+    
+    totalPrice = startPrice - discountPrice
     console.log("il prezzo finale ammonta a euro:" ,totalPrice )
 
 }
